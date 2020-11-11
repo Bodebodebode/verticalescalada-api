@@ -1,4 +1,3 @@
-//@ts-nocheck
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook').Strategy;
 const LocalStrategy = require('passport-local').Strategy;
@@ -12,7 +11,7 @@ passport.use(new FacebookStrategy(
         clientSecret: '1450a3b52a706ec6d05d89065288d306',//FACEBOOK_APP_SECRET,
         callbackURL: "http://localhost:3333/auth/facebook/callback"
     },
-    (request:any, accessToken:any, refreshToken:any, profile:any, done:any)=>{
+    (request, accessToken, refreshToken, profile, done)=>{
     }
 ));
 
@@ -21,7 +20,7 @@ passport.use(new LocalStrategy(
         usernameField: 'login',
         passwordField: 'senha'
     },
-    async (login:string, senha:string, done)=>{
+    async (login, senha, done)=>{
 
         // busca o usuario no db
         try{
@@ -31,7 +30,7 @@ passport.use(new LocalStrategy(
                     [login, senha]
                 )
                 .then((res)=>{
-                    const user:usuario = res.rows[0];
+                    const user = res.rows[0];
                     if(user === null || user === undefined) {
                         return done(null, false, 'Login ou senha inválidos');
                     }

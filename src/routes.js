@@ -36,7 +36,7 @@ const isLoggedIn = (req, res, next)=>{
  * @see models.aluno
  * @return {*}
  */
-const getContext = async (idAluno:number)=>{
+const getContext = async (idAluno)=>{
     return new Promise((resolve, reject)=>{
         client
             .query(
@@ -109,8 +109,8 @@ routes.post('/auth/login',
  * @param senha
  */
 routes.post('/user/register', (req, res, next)=>{
-    const pf:pessoa_fisica = req.body.pessoa_fisica;
-    const user:usuario = req.body.usuario;
+    const pf = req.body.pessoa_fisica;
+    const user = req.body.usuario;
 
     // verificações dos dados enviados
     if(!(pf.cpf && pf.nome && user.login && user.senha)) res.json( { "error":"Missing information" } );
