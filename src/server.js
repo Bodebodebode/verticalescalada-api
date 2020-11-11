@@ -24,6 +24,6 @@ app.use(routes);
  * const hashedPassword = await bcrypt.hash(req.body.password, 10);
 */
 
-app.listen(3333);
+app.listen(process.env.PORT || 3333);
 
 module.exports = app;
