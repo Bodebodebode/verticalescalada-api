@@ -2,8 +2,8 @@ const passport = require('passport');
 const FacebookStrategy = require('passport-facebook').Strategy;
 const LocalStrategy = require('passport-local').Strategy;
 
-import client from './database/db';
-import usuario from './database/models/usuario';
+import client from './database/db.mjs';
+// import usuario from './database/models/usuario';
 
 passport.use(new FacebookStrategy(
     {
