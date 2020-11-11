@@ -2,11 +2,11 @@
 import express from 'express';
 import passport from './passport.mjs';
 const passportjs = require('passport');
-import client from './database/db'
+import client from './database/db.mjs'
 
-import pessoa_fisica from './database/models/pessoa_fisica';
-import usuario from './database/models/usuario';
-import desserialize from './passport';
+// import pessoa_fisica from './database/models/pessoa_fisica';
+// import usuario from './database/models/usuario';
+// import desserialize from './passport';
 
 
 require('dotenv').config()
