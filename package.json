@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node --experimental-modules src/server.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
