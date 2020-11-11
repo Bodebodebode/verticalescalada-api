@@ -1,6 +1,6 @@
 //@ts-nocheck
 import express from 'express';
-import passport from './passport';
+import passport from './passport.mjs';
 const passportjs = require('passport');
 import client from './database/db'
 
