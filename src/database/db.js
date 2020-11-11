@@ -16,4 +16,4 @@ client.connect(
     }
 );
 
-export default client;
+module.exports = client;

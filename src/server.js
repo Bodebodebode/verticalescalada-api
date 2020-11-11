@@ -1,11 +1,11 @@
-import express from 'express';
-import routes from './routes.mjs';
-import cors from 'cors';
-import cookieParser from 'cookie-parser';
-import bcrypt from 'bcrypt';
-import session from 'express-session';
-import bodyParser from 'body-parser';
-import passport from 'passport';
+const express = require( 'express');
+const routes = require( './routes');
+const cors = require( 'cors');
+const cookieParser = require( 'cookie-parser');
+const bcrypt = require( 'bcrypt');
+const session = require( 'express-session');
+const bodyParser = require( 'body-parser');
+const passport = require( 'passport');
 
 
 const app = express();
@@ -26,4 +26,4 @@ app.use(routes);
 
 app.listen(3333);
 
-export default app;
+module.exports = app;

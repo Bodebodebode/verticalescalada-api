@@ -1,8 +1,8 @@
 //@ts-nocheck
-import express from 'express';
-import passport from './passport.mjs';
+const express = require('express');
+const passport = require('./passport');
 const passportjs = require('passport');
-import client from './database/db.mjs'
+const client = require('./database/db').client;
 
 // import pessoa_fisica from './database/models/pessoa_fisica';
 // import usuario from './database/models/usuario';
@@ -149,4 +149,4 @@ routes.get('/auth/logout', isLoggedIn, (req, res, next)=>{
     res.send(true);
 })
 
-export default routes;
+module.exports = routes;
