@@ -1,5 +1,5 @@
 import express from 'express';
-import routes from './routes';
+import routes from './routes.mjs';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import bcrypt from 'bcrypt';
